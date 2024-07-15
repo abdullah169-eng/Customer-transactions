@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/transaction.png"
+      type="image/x-icon"
+    />
+    <title>Customer Transactions</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="p-3">
+    <!-- Header -->
+    <header class="d-flex align-items-center">
+      <img src="images/transaction.png" alt="logo" />
+      <h2 class="text-black ms-2">Customer Transactions</h2>
+    </header>
+    <main>
+      <!-- Search -->
+      <section class="row my-4 g-3">
+        <article class="col-md-6">
+          <div>
+            <label for="customerName" class="form-label fw-bold ms-2">
+              Filter by Name
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              placeholder="Enter Customer Name"
+            />
+          </div>
+        </article>
+        <article class="col-md-6">
+          <div>
+            <label for="customerAmount" class="form-label fw-bold ms-2">
+              Filter by Transaction Amount
+            </label>
+            <input
+              type="number"
+              class="form-control"
+              id="customerAmount"
+              placeholder="Enter Amount"
+            />
+          </div>
+        </article>
+      </section>
+      <!-- Customer Transactions Display -->
+      <section id="custData">
+        <table class="table table-bordered border-black text-center">
+          <thead>
+            <tr>
+              <th class="color-o">Id</th>
+              <th class="color-o">Name</th>
+              <th class="color-o">Total Transactions Amount</th>
+              <th class="color-o">Number of Transactions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <!-- Display Transaction Data & Graph -->
+      <article class="row mt-5 align-items-center">
+        <section id="transData" class="col-md-6"></section>
+        <div class="chart bg-white col-md-6 d-none">
+          <canvas id="myChart"></canvas>
+        </div>
+      </article>
+    </main>
+    <!-- JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
